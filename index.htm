@@ -1,4 +1,9 @@
-<!DOCTYPE html><html lang="id"><head><!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-2FMNkLZYX6"></script><script>window.dataLayer = window.dataLayer || [];
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Player</title><!-- Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-2FMNkLZYX6"></script><script>
+window.dataLayer = window.dataLayer || [];
 
 function gtag(){
 dataLayer.push(arguments);
@@ -6,8 +11,7 @@ dataLayer.push(arguments);
 
 gtag('js', new Date());
 gtag('config', 'G-2EMZHLZYX6');
-</script><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Video Player</title><style>
+</script><style>
 body{
 margin:0;
 background:#000;
@@ -36,7 +40,8 @@ controlsList="nodownload"
 «»
 
 <source src="" type="video/mp4">
-</video><script>/* =========================
+</video><script>
+/* =========================
 KONFIGURASI
 ========================= */
 
@@ -46,7 +51,7 @@ const JSON_URL = "videos.json";
 const DIRECT_LINK =
 "https://auctionr.org/4/d9b0cb891b6d24fabf0e51e8923e191e";
 
-/* SHOPEE */
+/* SHOPEE AFFILIATE */
 const SHOPEE_LINK =
 "https://collshp.com/rud089";
 
@@ -96,9 +101,9 @@ CONTOH: #/K1Hi.mp4
 
 const hash = window.location.hash;
 
-const match = hash.match(/^#/?K(\d+)Hi.mp4$/i);
+const match = hash.match(/^#\/(K\d+Hi\.mp4)$/i);
 
-const id = match ? "K" + match[1] + "Hi.mp4" : null;
+const id = match ? match[1] : null;
 
 /* =========================
 LOAD VIDEOS.JSON
@@ -179,5 +184,4 @@ if(
 });
 
 </script></body>
-
 </html>
